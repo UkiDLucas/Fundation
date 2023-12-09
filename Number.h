@@ -10,6 +10,13 @@
 class Number 
 {
     public:
+        // // Macro to add class name to the class
+        // #define ADD_CLASS_NAME(class_name)  
+        // public:                             
+        //     const char *getName()           
+        //     {                               
+        //         return #class_name;         
+        //     }                                      
         
         // Number( Number anotherNumber )
         // {
@@ -19,20 +26,24 @@ class Number
         Number(int value)
         {
             valueDouble = value;
+            name = __func__;
         }
 
         Number(float value)
         {
             valueDouble = value;
+            name = __func__;
         }
 
         Number(double value){
             valueDouble = value;
+            name = __func__;
         }
 
         Number(std::string value)
         {
             valueDouble = std::stod(value);
+            name = __func__;
         }
 
         // Getters and Setters
@@ -68,10 +79,11 @@ class Number
 
         void printLine()
         {
-            std::cout << valueDouble << std::endl;
+            std::cout << name << " value is " << valueDouble << std::endl;
         }
 
     private:    
 
         double valueDouble = 0.0; // default value because C++ is stupid.
+        const char* name = "undefined"; // name of the class instance
 };
