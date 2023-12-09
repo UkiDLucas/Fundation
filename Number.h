@@ -5,8 +5,6 @@
 #include <string>
 #include <iostream>
 
-
-
 class Number 
 {
     public:
@@ -18,6 +16,7 @@ class Number
         //         return #class_name;         
         //     }                                      
         
+        /** cannot take itself as a type */
         // Number( Number anotherNumber )
         // {
         //     value = anotherNumber.getValue();
@@ -77,6 +76,9 @@ class Number
         bool isDivisibleBy(int value);
         bool nasNoValue();
 
+        /**
+         * https://stackoverflow.com/questions/77632879/how-can-i-get-the-class-instance-name-inside-c-object
+        */
         void printLine()
         {
             std::cout << name << " value is " << valueDouble << std::endl;

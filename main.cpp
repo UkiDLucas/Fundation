@@ -11,13 +11,13 @@ int main()
 {
 
     // Greek alpha
-    Number α{123}; α.printLine(); // C++11 assignment
+    Number α{1}; α.printLine(); // C++11 assignment
 
     // Greek beta
-    Number β(123.4); β.printLine(); // C assgnement 
+    Number β(2.0); β.printLine(); // C assgnement 
 
     // Greek gamma
-    Number γ("123.45"); γ.printLine();
+    Number γ("3.0"); γ.printLine();
 
     // Greek delta
     Number δ = α.add(β.getValue() ); δ.printLine();
